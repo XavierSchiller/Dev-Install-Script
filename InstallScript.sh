@@ -2,11 +2,15 @@ Node=1
 
 
 echo "Dev Installer Running... "
-echo "Installing Curl"
 
-apt install curl -y > /dev/null
+if [ curl --version ]; then
+    echo "Curl Has Already Been Installed"
+else
+    ehco "Installing Curl..."
+    apt install curl -y 1&2> /dev/null
+fi
 
-if [Node -eq 0 ]; then
+if [ Node -eq 0 ]; then
     echo "Installing node"
     curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh
     bash nodesource_setup.sh > /dev/null
