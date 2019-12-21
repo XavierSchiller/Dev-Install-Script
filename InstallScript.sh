@@ -15,7 +15,7 @@ if [ $Node -eq 0 ]; then
     curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh
     bash nodesource_setup.sh
     apt-get -qq update
-    apt-get install nodejs
+    apt-get install nodejs -y 
     echo "Nodejs Has been Installed." 
 else
     echo "Skipping Installation of Node"
