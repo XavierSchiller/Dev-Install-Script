@@ -4,7 +4,7 @@ Node=1
 echo "Dev Installer Running... "
 echo "Installing Curl"
 
-apt install curl
+apt install curl -y > /dev/null
 
 if [Node -eq 0 ] then
     echo "Installing node"
