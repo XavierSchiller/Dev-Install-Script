@@ -3,11 +3,11 @@ Node=1
 
 echo "Dev Installer Running... "
 
-if [ curl --version ]; then
-    echo "Curl Has Already Been Installed"
-else
-    ehco "Installing Curl..."
+if ! type "$curl" &> /dev/null then
+    echo "Installing Curl..."
     apt install curl -y 1&2> /dev/null
+else
+    echo "Curl Has Already Been Installed"
 fi
 
 if [ Node -eq 0 ]; then
