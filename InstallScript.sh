@@ -6,6 +6,8 @@
 
 Node=0
 Yarn=0
+Python=0
+SDKman=0
 
 # ---------------- Don't Edit Below This line ------------------
 
@@ -41,7 +43,7 @@ else
     echo "Skipping Installation of Node"
 fi
 
-if [$Yarn -eq 0]; then
+if [$Yarn -eq 1]; then
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
     installX yarn
@@ -50,3 +52,23 @@ else
 fi
 
 # --- Python
+
+# Installs Pyenv
+
+if [ $Python -eq 1 ]; then
+    curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
+    exec $SHELL
+else
+    echo "Skipping Installation of Pyenv manager"
+fi
+
+# --- SDKman
+
+# Installs SDKman 
+
+if [$SDKman -eq 1]; then
+    curl -s "https://get.sdkman.io" | bash
+    source "$HOME/.sdkman/bin/sdkman-init.sh"
+else
+    echo "Skipping installation of SDKman"
+fi
