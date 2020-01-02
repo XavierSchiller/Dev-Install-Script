@@ -43,7 +43,7 @@ else
     echo "Skipping Installation of Node"
 fi
 
-if [$Yarn -eq 1]; then
+if [ $Yarn -eq 1 ]; then
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
     installX yarn
@@ -66,7 +66,7 @@ fi
 
 # Installs SDKman 
 
-if [$SDKman -eq 1]; then
+if [ $SDKman -eq 1 ]; then
     curl -s "https://get.sdkman.io" | bash
     source "$HOME/.sdkman/bin/sdkman-init.sh"
 else
