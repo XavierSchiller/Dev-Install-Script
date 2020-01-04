@@ -79,7 +79,7 @@ if [ $Python -eq 1 ]; then
     echo 'export PATH="/root/.pyenv/bin:$PATH"' >> ~/.bashrc
     echo 'eval "$(pyenv init -)"' >> ~/.bashrc
     echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
-    source ~/.bashrc
+    source $HOME/.bashrc
 else
     echo "Skipping Installation of Pyenv manager"
 fi
