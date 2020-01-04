@@ -31,8 +31,6 @@ do
         Yarn=1
     elif [ "$item" == "Python" ]; then
         Python=1
-        echo $Python 
-        exit 1
     elif [ "$item" == "SDKman" ]; then
         SDKman=1
     fi
