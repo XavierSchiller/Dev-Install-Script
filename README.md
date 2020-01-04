@@ -36,3 +36,6 @@ Where arg coresponds to any of the following:
 
 (Note that if you're using all, the others aren't really required. It installs everything.)
 
+---
+
+I am not responsible for anything that goes wrong with your system, I have tested this on a Docker container and it was unlikely that there was anything that went wrong. 
