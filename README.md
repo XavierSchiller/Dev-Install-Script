@@ -39,3 +39,15 @@ Where arg coresponds to any of the following:
 ---
 
 I am not responsible for anything that goes wrong with your system, I have tested this on a Docker container and it was unlikely that there was anything that went wrong. 
+
+## What else will I be adding in the near future?
+
+- rbenv (ruby)
+- cmake
+- boost
+
+
+## Why will I not be supporting Editors.
+
+There is simply no end to the amount of editors out there. Do that yourself.
+
