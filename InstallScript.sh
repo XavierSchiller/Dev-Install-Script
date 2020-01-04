@@ -76,7 +76,10 @@ fi
 
 if [ $Python -eq 1 ]; then
     curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash
-    exec $SHELL
+    echo "export PATH=\"/root/.pyenv/bin:$PATH\"" >> ~/.bashrc
+    echo "eval \"$(pyenv init -)\"" >> ~/.bashrc
+    echo "eval \"$(pyenv virtualenv-init -)\"" >> ~/.bashrc
+    source ~/.bashrc
 else
     echo "Skipping Installation of Pyenv manager"
 fi
