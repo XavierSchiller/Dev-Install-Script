@@ -20,18 +20,20 @@ function installX() {
 
 for item in $@
 do
-    if [ "$item" == "all"]; then
+    if [ "$item" == "all" ]; then
         Node=1
         Yarn=1
         Python=1
         SDKman=1
-    elif ["$item" == "Node" ]; then
+    elif [ "$item" == "Node" ]; then
         Node=1
-    elif ["$item" == "Yarn" ]; then
+    elif [ "$item" == "Yarn" ]; then
         Yarn=1
-    elif ["$item" == "Python" ]; then
+    elif [ "$item" == "Python" ]; then
         Python=1
-    elif ["$item" == "SDKman" ]; then
+        echo $Python 
+        exit 1
+    elif [ "$item" == "SDKman" ]; then
         SDKman=1
     fi
 done
