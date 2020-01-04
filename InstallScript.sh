@@ -75,11 +75,10 @@ fi
 # Installs Pyenv
 
 if [ $Python -eq 1 ]; then
-    curl -L https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash &> /dev/null
+    curl -sL https://github.com/pyenv/pyenv-installer/raw/master/bin/pyenv-installer | bash &> /dev/null
     echo 'export PATH="/root/.pyenv/bin:$PATH"' >> ~/.bashrc
     echo 'eval "$(pyenv init -)"' >> ~/.bashrc
     echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
-    . $HOME/bashrc
 else
     echo "Skipping Installation of Pyenv manager"
 fi
@@ -90,9 +89,10 @@ fi
 
 if [ $SDKman -eq 1 ]; then
     curl -s "https://get.sdkman.io" | bash
-    . "$HOME/.sdkman/bin/sdkman-init.sh"
 
 else
     echo "Skipping installation of SDKman"
 fi
 
+echo 'Installation is complete! Run the following in your terminal:'
+echo '. ~/.bashrc'
